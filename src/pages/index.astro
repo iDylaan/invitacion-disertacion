@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../components/BaseLayout.astro";
+import FinisherSection from "../components/FinisherSection.astro";
+import CounterDown from "../components/CounterDown.jsx";
+---
+
+<BaseLayout>
+	<FinisherSection>
+		<div
+			id="hero-content"
+			class="text-center space-y-6 max-w-xl text-white"
+		>
+			<h1 class="text-5xl font-bold leading-tight">
+				Estás invitado a nuestra disertación
+			</h1>
+			<p class="text-xl italic opacity-80">Comenzará en...</p>
+		</div>
+		<div class="flex justify-center">
+			<CounterDown dateTarget="2025-05-13T10:00:00" client:load />
+		</div>
+	</FinisherSection>
+	<!-- <section
+		class="w-screen h-screen flex items-center justify-center relative z-10"
+	>
+	</section> -->
+
+	<section>
+		Press
+		<kbd class="kbd kbd-sm">F</kbd>
+		to pay respects.
+	</section>
+</BaseLayout>
