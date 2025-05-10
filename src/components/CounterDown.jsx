@@ -41,8 +41,8 @@ export default function CounterDown({ dateTarget }) {
                 { label: 'minuto', value: timeLeft.minutes },
                 { label: 'segundo', value: timeLeft.seconds },
             ].map(({ label, value }) => (
-                <div key={label} className="flex flex-col items-center w-24">
-                    <span className="countdown font-mono text-6xl">
+                <div key={label} className="grid place-center lg:w-24">
+                    <span className="countdown font-mono lg:text-6xl grid place-center">
                         <span style={{ "--value": value }}></span>
                     </span>
                     <span className="text-sm mt-2">

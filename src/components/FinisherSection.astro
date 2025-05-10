@@ -1,13 +1,14 @@
 ---
+
 ---
 
-<div
-    class="finisher-header relative w-full h-screen flex items-center justify-center text-white text-center"
-    style="z-index: 0"
->
-    <div class="z-10 space-y-6 max-w-xl">
+<div class="finisher-header" style="z-index: 0">
+    <section
+        class="relative w-full min-h-screen flex items-center justify-center text-white text-center"
+    >
         <slot />
-    </div>
+        <div class="absolute bottom-[-150px] left-0 w-full h-100 pointer-events-none bottom-fader"></div>
+    </section>
 
     <!-- Script para fondo animado -->
     <script src="/libs/finisher-header.es5.min.js" type="text/javascript"

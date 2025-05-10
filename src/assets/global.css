@@ -3,3 +3,12 @@
 @plugin "daisyui" {
     themes: light --default, dark --prefersdark, dracula;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bottom-fader {
+    background: #232530;
+    background: linear-gradient(0deg, rgba(35, 37, 48, 1) 0%, rgba(0, 212, 255, 0) 100%);
+}

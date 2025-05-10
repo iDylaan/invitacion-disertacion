@@ -1,0 +1,134 @@
+<!-- NAVBAR -->
+<div
+    class="h-[100%] z-100 absolute top-0 left-0 right-0 botton-0 pointer-events-none"
+>
+    <!-- DESKTOP -->
+    <div class="h-[85dvh] hidden sm:block"></div>
+
+    <div class="sticky top-8 sm:flex justify-center items-center hidden">
+        <nav
+            class="bg-[#313444]/50 backdrop-blur-md rounded-full px-2 py-2 shadow-lg w-fit pointer-events-auto"
+        >
+            <!-- Actualizar la navegación -->
+            <ul class="flex space-x-6 text-base-content font-semibold">
+                <li>
+                    <a href="#hero" class="btn btn-ghost btn-sm rounded-full"
+                        >Inicio</a
+                    >
+                </li>
+                <li>
+                    <a href="#proyecto" class="btn btn-ghost btn-sm rounded-full"
+                        >Proyecto</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="#expositores"
+                        class="btn btn-ghost btn-sm rounded-full">Expositores</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="#fecha"
+                        class="btn btn-ghost btn-sm rounded-full">Fecha</a
+                    >
+                </li>
+                <li>
+                    <a href="#ubicacion" class="btn btn-ghost btn-sm rounded-full"
+                        >Ubicación</a
+                    >
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- DESKTOP -->
+
+    <!-- MOBILE -->
+    <div class="block sm:hidden">
+        <div class="fixed top-4 left-4 z-50 pointer-events-auto">
+            <button
+                id="mobile-menu-button"
+                class="btn btn-circle bg-[#313444]/50 backdrop-blur-md shadow-lg"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Menú desplegable -->
+            <div
+                id="mobile-menu"
+                class="hidden mt-2 bg-[#313444]/50 backdrop-blur-md rounded-lg shadow-lg w-48 pointer-events-auto"
+            >
+                <ul class="py-2 px-1">
+                    <li>
+                        <a
+                            href="#hero"
+                            class="block px-4 py-2 hover:bg-gray-700 rounded-lg"
+                            >Inicio</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#proyecto"
+                            class="block px-4 py-2 hover:bg-gray-700 rounded-lg"
+                            >Proyecto</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#expositores"
+                            class="block px-4 py-2 hover:bg-gray-700 rounded-lg"
+                            >Expositores</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#fecha"
+                            class="block px-4 py-2 hover:bg-gray-700 rounded-lg"
+                            >Fecha</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#ubicacion"
+                            class="block px-4 py-2 hover:bg-gray-700 rounded-lg"
+                            >Ubicación</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- MOBILE -->
+</div>
+
+<script>
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    mobileMenuButton?.addEventListener("click", () => {
+        mobileMenu?.classList.toggle("hidden");
+    });
+
+    // Cerrar el menú al hacer clic fuera de él
+    document.addEventListener("click", (e) => {
+        if (
+            !mobileMenuButton?.contains(e.target) &&
+            !mobileMenu?.contains(e.target)
+        ) {
+            mobileMenu?.classList.add("hidden");
+        }
+    });
+</script>
+<!-- NAVBAR -->

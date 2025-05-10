@@ -5,20 +5,108 @@ import CounterDown from "../components/CounterDown.jsx";
 ---
 
 <BaseLayout>
-
 	<FinisherSection>
 		<div
-			id="hero-content"
-			class="text-center space-y-6 max-w-xl text-white"
+			id="hero"
+			class="flex flex-col items-center justify-center min-h-screen w-screen lg:flex-row lg:items-center lg:justify-center lg:gap-10 p-5 mt-[-50px]"
 		>
-			<h1 class="text-5xl font-bold leading-tight">
-				Estás invitado a nuestra disertación
-			</h1>
-			<p class="text-xl italic opacity-80">Comenzará en...</p>
-		</div>
-		<div class="flex justify-center">
-			<CounterDown dateTarget="2025-05-13T10:00:00" client:load />
+			<div class="first_mid">
+				<div
+					id="hero-content"
+					class="text-center space-y-6 max-w-xl text-white"
+				>
+					<h1
+						class="font-bold leading-tight lg:text-left lg:text-5xl text-4xl"
+					>
+						Estás invitado a nuestra disertación 🎓
+					</h1>
+					<p class="text-xl italic opacity-80 lg:text-left">
+						Comenzará en...
+					</p>
+				</div>
+			</div>
+
+			<div class="second_mid">
+				<div class="flex justify-center mb-4">
+					<CounterDown dateTarget="2025-05-13T10:00:00" client:load />
+				</div>
+				<span> Martes 13 de mayo a las 10:00 AM </span>
+			</div>
 		</div>
 	</FinisherSection>
-	
+
+	<section id="proyecto" class="min-h-screen flex items-center justify-center">
+		<div class="text-center">
+			<h1 class="text-4xl font-bold mb-4">Disertación de Proyecto</h1>
+			<p class="text-xl">
+				Sistema de Administración de los Instrumentos del Desempeño
+				(SAISD)
+			</p>
+			<p class="text-lg mt-2">Secretaría de Hacienda y Crédito Público</p>
+		</div>
+	</section>
+
+	<section
+		id="expositores"
+		class="min-h-screen flex items-center justify-center bg-base-200"
+	>
+		<div class="text-center">
+			<h2 class="text-3xl font-bold mb-8">Expositores</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="card bg-base-100 shadow-xl">
+					<div class="card-body">
+						<h3 class="text-xl font-bold">Daniel Chaparro Marin</h3>
+					</div>
+				</div>
+				<div class="card bg-base-100 shadow-xl">
+					<div class="card-body">
+						<h3 class="text-xl font-bold">
+							Campos Figueroa Brandon
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="fecha" class="min-h-screen flex items-center justify-center">
+		<div class="text-center">
+			<h2 class="text-3xl font-bold mb-8">Fecha y Hora</h2>
+			<div class="card bg-base-100 shadow-xl max-w-md mx-auto">
+				<div class="card-body">
+					<p class="text-xl mb-4">13 de Mayo de 2024</p>
+					<p class="text-lg">Hora: 10:00 AM</p>
+					<p class="text-sm mt-4 text-warning">
+						Se solicita llegar 15 minutos antes
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section
+		id="ubicacion"
+		class="min-h-screen flex items-center justify-center bg-base-200"
+	>
+		<div class="text-center">
+			<h2 class="text-3xl font-bold mb-8">Ubicación</h2>
+			<div class="card bg-base-100 shadow-xl max-w-md mx-auto">
+				<div class="card-body">
+					<!-- Aquí puedes agregar la dirección específica -->
+					<p class="text-lg">Dirección del lugar</p>
+					<!-- Opcional: Puedes agregar un mapa embebido aquí -->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section
+		id="models"
+		class="w-screen h-screen flex items-center justify-center text-white text-center section-transition mt-[-150px]"
+	>
+		<div class="text-center space-y-6 max-w-xl">
+			<h1 class="text-5xl font-bold leading-tight">¡Nos vemos pronto!</h1>
+			<p class="text-xl italic opacity-80">¡No faltes!</p>
+		</div>
+	</section>
 </BaseLayout>
