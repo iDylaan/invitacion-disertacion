@@ -7,7 +7,10 @@
         class="relative w-full min-h-screen flex items-center justify-center text-white text-center"
     >
         <slot />
-        <div class="absolute bottom-[-150px] left-0 w-full h-100 pointer-events-none bottom-fader"></div>
+        <div
+            class="absolute bottom-[-152px] left-0 w-full h-[40dvh] pointer-events-none bottom-fader"
+        >
+        </div>
     </section>
 
     <!-- Script para fondo animado -->
@@ -16,24 +19,38 @@
     <script type="text/javascript" is:inline>
         setTimeout(() => {
             new FinisherHeader({
-                count: 11,
-                size: { min: 1300, max: 1500, pulse: 0 },
+                count: 20,
+                size: {
+                    min: 1367,
+                    max: 1500,
+                    pulse: 2,
+                },
                 speed: {
-                    x: { min: 0.6, max: 3 },
-                    y: { min: 0.6, max: 3 },
+                    x: {
+                        min: 0.6,
+                        max: 3,
+                    },
+                    y: {
+                        min: 0.6,
+                        max: 3,
+                    },
                 },
                 colors: {
                     background: "#232530",
                     particles: [
                         "#44475a",
                         "#282a36",
-                        "#5b617d",
-                        "#1e1f29",
-                        "#747da6",
+                        "#5b73e3",
+                        "#2f46b3",
+                        "#3348aa",
                         "#8695df",
+                        "#000f5f",
+                        "#9736ff",
+                        "#7b00ff",
+                        "#dc12f0",
                     ],
                 },
-                blending: "overlay",
+                blending: "lighten",
                 opacity: {
                     center: 0.6,
                     edge: 0,
