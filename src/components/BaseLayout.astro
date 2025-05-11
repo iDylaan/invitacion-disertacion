@@ -2,7 +2,8 @@
 import "@/assets/global.css";
 import "animate.css";
 import StickyNavbar from "./StickyNavbar.astro";
-import Footer from "./Footer.astro"
+import Footer from "./Footer.astro";
+import GithubButton from "./GithubButton.astro";
 ---
 
 <html lang="es" data-theme="dracula">
@@ -12,13 +13,13 @@ import Footer from "./Footer.astro"
         <title>Invitación Disertación</title>
     </head>
     <body class="relative bg-base-200 text-base-content">
+        <GithubButton />
         <StickyNavbar />
 
         <main class="relative z-10 overflow-x-hidden">
             <slot />
         </main>
+
+        <Footer />
     </body>
-
-
-    <Footer />
 </html>
