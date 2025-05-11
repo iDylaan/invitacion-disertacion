@@ -2,6 +2,8 @@
 import BaseLayout from "../components/BaseLayout.astro";
 import FinisherSection from "../components/FinisherSection.astro";
 import CounterDown from "../components/CounterDown.jsx";
+import Tecnologias from "../components/Tecnologias.astro";
+import Stats from '../components/Stats.astro';
 ---
 
 <BaseLayout>
@@ -36,7 +38,7 @@ import CounterDown from "../components/CounterDown.jsx";
 					class="p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-transparent dark:text-yellow-300 italic"
 					role="alert"
 				>
-					<span class="text-sm"
+					<span class="text-sm font-semibold"
 						>Por favor, llega 15 minutos antes 🙏</span
 					>
 				</div>
@@ -55,7 +57,7 @@ import CounterDown from "../components/CounterDown.jsx";
 			</p>
 			<p class="text-xl mt-2">Secretaría de Hacienda y Crédito Público</p>
 			<img
-				src="/public/imgs/SAISD_LOGIN.png"
+				src="/imgs/SAISD_LOGIN.png"
 				alt="Login SAISD"
 				class="lg:w-[50dvw] sm:w-[75dvw] w-[95dvw] m-auto mt-5 rounded-lg"
 			/>
@@ -67,9 +69,11 @@ import CounterDown from "../components/CounterDown.jsx";
 		</div>
 	</section>
 
+	<Tecnologias />
+
 	<section
 		id="expositores"
-		class="min-h-screen flex items-center justify-center bg-base-200"
+		class="min-h-[85dvh] flex items-center justify-center bg-base-200"
 	>
 		<div class="text-center">
 			<h2 class="text-3xl font-bold mb-8">Expositores</h2>
@@ -89,12 +93,14 @@ import CounterDown from "../components/CounterDown.jsx";
 					</div>
 				</div>
 			</div>
+
+			<Stats />
 		</div>
 	</section>
 
 	<section
 		id="ubicacion"
-		class="min-h-screen flex items-center justify-center bg-base-200"
+		class="min-h-[85dvh] flex items-center justify-center bg-base-200"
 	>
 		<div class="text-center">
 			<h2 class="text-3xl font-bold mb-8">Ubicación</h2>
@@ -106,8 +112,9 @@ import CounterDown from "../components/CounterDown.jsx";
 					<p class="text-lg font-bold">
 						Universidad Tecnológica de Nezahualcóyotl
 					</p>
-					<p class="text-lg">División de Informática y Computación</p>
-					<p class="text-lg">Sala B-201</p>
+					<p class="italic">Universidad Tecnológica de Nezahualcóyotl, Cto. Rey Nezahualcóyotl Manzana 010, Benito Juárez, 57000 Cdad. Nezahualcóyotl, Méx.</p>
+					<p class="text-lg font-bold">División de Informática y Computación</p>
+					<p class="text-lg font-bold">Sala B-201</p>
 					<div class="mt-4">
 						<div style="width: 100%">
 							<iframe
@@ -128,7 +135,7 @@ import CounterDown from "../components/CounterDown.jsx";
 
 	<section
 		id="fin"
-		class="w-screen min-h-[50dvw] flex items-center justify-center text-white text-center section-transition mt-[-150px]"
+		class="w-screen min-h-[40dvw] flex items-center justify-center text-white text-center section-transition mt-[-150px]"
 	>
 		<div class="text-center space-y-6 max-w-xl">
 			<h1 class="text-5xl font-bold leading-tight">¡Nos vemos pronto!</h1>
